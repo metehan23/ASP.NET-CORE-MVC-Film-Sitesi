@@ -1,0 +1,33 @@
+﻿@model List<Movie>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h1>Film Listesi</h1>
+    <div id="filmler">
+
+        @foreach (var movie in Model)
+        {
+            <div class="film">
+                <p>@movie.Title</p>
+                <p>@movie.Description</p>
+                @*<p>
+                    <ul>
+                        @foreach (var item in movie.Players)
+                        {
+                            <li>@item</li>
+                        }
+
+                    </ul>
+                </p>*@
+            </div>
+        }
+
+
+    </div>
+</body>
+</html>
